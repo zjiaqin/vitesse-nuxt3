@@ -2,6 +2,10 @@
 const { data } = await useFetch('/api/pageview')
 
 const time = useTimeAgo(() => data.value?.startAt || 0)
+
+async function test() {
+  await apis.getAboutUsingGet(undefined)
+}
 </script>
 
 <template>
@@ -10,4 +14,7 @@ const time = useTimeAgo(() => data.value?.startAt || 0)
     page views since
     <span text-gray>{{ time }}</span>
   </div>
+  <el-button @click="test">
+    test
+  </el-button>
 </template>

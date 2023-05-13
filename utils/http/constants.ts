@@ -1,7 +1,8 @@
 export enum ECode {
   // 业务
-  SUCCESS = 0,
+  SUCCESS = 20000,
   UNKNOWN = -1,
+  TIMEOUT = 40001,
 }
 
 export const codeMessages = {

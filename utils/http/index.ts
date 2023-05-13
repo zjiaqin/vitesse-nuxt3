@@ -12,6 +12,8 @@ import type { CreateHttpOptions, HttpTransform, RequestOptions } from './type'
 import { joinTimestamp } from './utils'
 import type { ApiResult, GetApiResult } from '@/api/type'
 
+const runtime = useRuntimeConfig()
+
 const transform: HttpTransform = {
   /** 请求之前处理 config */
   beforeRequestHook: (config, options) => {
@@ -82,6 +84,7 @@ const transform: HttpTransform = {
     let { data } = apiRes
     const { code = -1, pagination } = apiRes
     const isSuccess = code === ECode.SUCCESS
+    window.console.log(apiRes)
 
     if (isSuccess) {
       if (pagination) {
@@ -156,7 +159,7 @@ function createHttp(options?: Partial<CreateHttpOptions>) {
   )
 }
 
-export const defHttp = createHttp({ baseURL: '/v1' })
+export const defHttp = createHttp({ baseURL: runtime.public.apiBase })
 export function createRequest<TReq, TResp = any>(name: string,
   requestConfigCreator: (args: TReq) => AxiosRequestConfig) {
   const request = function (args: TReq, options?: RequestOptions) {

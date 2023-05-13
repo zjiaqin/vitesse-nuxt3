@@ -2,8 +2,16 @@ import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 import { defineConfig as defineI18nConfig } from './.nuxt.config.ts/i18n'
 import { defineConfig as defineViteConfig } from './.nuxt.config.ts/vite/index'
+import { defineConfig as defineNitroConfig } from './.nuxt.config.ts/nitro/index'
 
 export default defineNuxtConfig({
+
+  runtimeConfig: {
+    apiSecret: '',
+    public: {
+      apiBase: '/api',
+    },
+  },
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
@@ -40,19 +48,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  nitro: {
-    esbuild: {
-      options: {
-        target: 'esnext',
-      },
-    },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
+  devServer: {
+    port: 4001,
   },
+  nitro: defineNitroConfig(),
   vite: defineViteConfig(),
   i18n: defineI18nConfig(),
   app: {
