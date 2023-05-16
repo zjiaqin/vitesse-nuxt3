@@ -7,7 +7,6 @@ import { defineConfig as defineNitroConfig } from './.nuxt.config.ts/nitro/index
 export default defineNuxtConfig({
 
   runtimeConfig: {
-    apiSecret: '',
     public: {
       apiBase: '/api',
     },
@@ -36,9 +35,9 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
   },
 
-  css: [
-    '@unocss/reset/tailwind.css',
-  ],
+  // css: [
+  //   '@unocss/reset/tailwind.css',
+  // ],
 
   colorMode: {
     classSuffix: '',

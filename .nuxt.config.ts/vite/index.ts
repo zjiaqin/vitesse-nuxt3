@@ -13,6 +13,14 @@ export const defineConfig = (): NuxtConfig['vite'] => {
     plugins: [
   
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/styles/var.scss" as *;'
+        }
+      }
+    },
+
     optimizeDeps: {
     
     },

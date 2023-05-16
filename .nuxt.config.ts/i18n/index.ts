@@ -7,7 +7,7 @@ export const defineConfig = (): NuxtConfig['i18n'] => {
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
       { code: 'zh', iso: 'zh-CN', name: '简体中文', file: 'zh.json' },
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'zh',
     strategy: 'prefix_and_default',
     lazy: true,
     langDir: 'lang',
@@ -18,9 +18,9 @@ export const defineConfig = (): NuxtConfig['i18n'] => {
     },
     vueI18n: {
       legacy: false,
-      locale: 'en',
+      locale: 'zh',
       // messages: {},
-      fallbackLocale: 'en',
+      fallbackLocale: 'zh',
     },
   };
 };
