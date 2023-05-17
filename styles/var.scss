@@ -1,5 +1,16 @@
-:root {
-  --primary-color: #004dff;
+:root{
   --page-max-width: 1400px;
 }
+:root.light {
+  --primary-color: #85AAA3;
+  --primary-bg-color:#fff;
+  --primary-text-color:#31353A;
+  --secondary-text-color:#8e8e8e;
+  --less-text-color:#eeeeee;
+
+}
+
+
+
+  
   

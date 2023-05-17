@@ -16,7 +16,12 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      veryCool: '#0000ff', // class="text-very-cool"
+    // class="text-very-cool"
+      primaryColor: 'var(--primary-color)',
+      primaryTextColor: 'var(--primary-text-color)',
+      secondaryTextColor: 'var(--secondary-text-color)',
+      primaryBgColor: 'var(--primary-bg-color)',
+      lessTextColor: 'var(--less-text-color)',
     },
   },
   presets: [

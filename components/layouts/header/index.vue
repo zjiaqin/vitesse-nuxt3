@@ -1,17 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Title from './Title.vue'
+import Menu from './Menu.vue'
+</script>
 
 <template>
-  <header text-5xl text-very-cool>
-    LEADWHITE
-  </header>
-  <p class="test">
-    记录思考与生活
-  </p>
-  <a href="">233553</a>
+  <Title />
+  <Menu />
 </template>
 
 <style lang="scss" scoped>
-.test{
-  color:var(--primary-color) ;
-}
+
 </style>

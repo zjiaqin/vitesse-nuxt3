@@ -136,9 +136,8 @@ table {
 /* #E */
 
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 16px;
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei Light,WenQuanYi Micro Hei,sans-serif;
+  font-size: 4px; // 1rem=4px  与 unocss 对应
 }
 
 ul {
@@ -147,7 +146,7 @@ ul {
 }
 
 a {
-//   color: var(--primary-color);
-  color:pink;
+  color: var(--primary-text-color);
+
   text-decoration: none;
 }
